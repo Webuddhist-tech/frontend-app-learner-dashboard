@@ -9,6 +9,8 @@ $input-focus-box-shadow: var(--pgn-elevation-form-input-base); // hack to get up
 @import "~@edx/frontend-component-header/dist/index";
 @import "~@edx/frontend-component-footer/dist/_footer";
 
+@import "~@edx/brand/paragon/learner-dashboard";
+
 .text-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
