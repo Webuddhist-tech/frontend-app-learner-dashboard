@@ -5,7 +5,7 @@ import { Card, Hyperlink, Icon } from '@openedx/paragon';
 import { ArrowForward } from '@openedx/paragon/icons';
 
 import { reduxHooks } from 'hooks';
-import moreCoursesSVG from 'assets/more-courses-sidewidget.svg';
+import lookingForChallengeImage from 'assets/looking-for-challenge.png';
 import { baseAppUrl } from 'data/services/lms/urls';
 
 import { findCoursesWidgetClicked } from './track';
@@ -22,7 +22,7 @@ export const LookingForChallengeWidget = () => {
   return (
     <Card orientation="horizontal" id="looking-for-challenge-widget">
       <Card.ImageCap
-        src={moreCoursesSVG}
+        src={lookingForChallengeImage}
         srcAlt="course side widget"
       />
       <Card.Body className="m-auto pr-2">

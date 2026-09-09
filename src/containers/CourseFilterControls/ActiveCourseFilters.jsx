@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useIntl } from '@edx/frontend-platform/i18n';
 
 import { Button, Chip } from '@openedx/paragon';
-import { CloseSmall } from '@openedx/paragon/icons';
+import { Close } from '@openedx/paragon/icons';
 import { reduxHooks } from 'hooks';
 
 import messages from './messages';
@@ -20,8 +20,9 @@ export const ActiveCourseFilters = ({
       {filters.map(filter => (
         <Chip
           key={filter}
-          iconAfter={CloseSmall}
-          onClick={handleRemoveFilter(filter)}
+          iconAfter={Close}
+          iconAfterAlt={formatMessage(messages[filter])}
+          onIconAfterClick={handleRemoveFilter(filter)}
         >
           {formatMessage(messages[filter])}
         </Chip>
