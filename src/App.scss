@@ -4,19 +4,12 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
-@import "~@edx/brand/paragon/fonts";
-@import "~@edx/brand/paragon/overrides";
-@import "~@edx/brand/paragon/footer";
-@import "~@edx/brand/paragon/learner-dashboard";
-
 $input-focus-box-shadow: var(--pgn-elevation-form-input-base); // hack to get upgrade to paragon 4.0.0 to work
 
 @import "~@edx/frontend-component-header/dist/index";
 @import "~@edx/frontend-component-footer/dist/_footer";
 
-// Styles the site-nav/nav-brand markup that the header component renders.
-// Imported after the component's own SCSS so the brand rules win.
-@import "~@edx/brand/paragon/header";
+@import "~@edx/brand/paragon/learner-dashboard";
 
 .text-ellipsis {
   overflow: hidden;
