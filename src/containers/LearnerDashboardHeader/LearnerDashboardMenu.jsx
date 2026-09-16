@@ -52,11 +52,13 @@ const getLearnerHeaderMenu = (
           type: 'item',
           href: `${getConfig().ACCOUNT_PROFILE_URL}/u/${authenticatedUser?.username}`,
           content: formatMessage(messages.profile),
+          iconName: 'profile',
         },
         {
           type: 'item',
           href: `${getConfig().ACCOUNT_SETTINGS_URL}`,
           content: formatMessage(messages.account),
+          iconName: 'account',
         },
         ...(getConfig().ORDER_HISTORY_URL ? [{
           type: 'item',
@@ -72,6 +74,7 @@ const getLearnerHeaderMenu = (
           type: 'item',
           href: `${getConfig().LOGOUT_URL}`,
           content: formatMessage(messages.signOut),
+          iconName: 'signout',
         },
       ],
     },
