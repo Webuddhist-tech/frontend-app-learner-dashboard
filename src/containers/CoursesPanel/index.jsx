@@ -18,6 +18,8 @@ import messages from './messages';
 
 import './index.scss';
 
+const emphasize = chunks => <em>{chunks}</em>;
+
 /**
  * Renders the list of CourseCards, as well as the controls (CourseFilterControls) for modifying the list.
  * Also houses the NoCoursesView to display if the user hasn't enrolled in any courses.
@@ -106,7 +108,9 @@ export const CoursesPanel = () => {
   return (
     <div className="course-list-container">
       <div className="course-list-heading-container">
-        <h2 className="course-list-title">{formatMessage(messages.myCourses)}</h2>
+        <h2 className="course-list-title">
+          {formatMessage(messages.myCourses, { em: emphasize })}
+        </h2>
         <div className="course-filter-controls-container">
           <CourseFilterControls {...courseListData.filterOptions} />
         </div>

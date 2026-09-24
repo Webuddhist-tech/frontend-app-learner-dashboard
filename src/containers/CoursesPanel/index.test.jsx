@@ -6,7 +6,6 @@ import { reduxHooks } from 'hooks';
 import messagesNoCourses from 'containers/CoursesPanel/NoCoursesView/messages';
 import { useCourseListData } from './hooks';
 import CoursesPanel from '.';
-import messages from './messages';
 
 const courseSearchUrl = '/course-search-url';
 
@@ -82,8 +81,9 @@ describe('CoursesPanel', () => {
       reduxHooks.useHasCourses.mockReturnValue(true);
       const visibleList = [{ cardId: 'foo' }, { cardId: 'bar' }, { cardId: 'baz' }];
       createWrapper({ visibleList });
-      const heading = screen.getByText(messages.myCourses.defaultMessage);
+      const heading = screen.getByRole('heading', { name: 'My Courses' });
       expect(heading).toBeInTheDocument();
+      expect(screen.getByText('Courses').tagName).toBe('EM');
     });
   });
 });
