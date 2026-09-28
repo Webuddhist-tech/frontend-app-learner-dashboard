@@ -33,7 +33,7 @@ const getLearnerHeaderMenu = (
       : []),
     {
       type: 'item',
-      href: `${urls.baseAppUrl('/wishlist')}`,
+      href: `${getConfig().EXTENSION_BASE_URL}/wishlist`,
       content: formatMessage(messages.wishlist),
     },
   ],
