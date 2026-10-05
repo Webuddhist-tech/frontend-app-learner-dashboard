@@ -38,7 +38,8 @@ export const useAccessMessage = ({ cardId }) => {
 
 export const useCardDetailsData = ({ cardId }) => {
   const { formatMessage } = useIntl();
-  const providerName = reduxHooks.useCardProviderData(cardId).name;
+  const provider = reduxHooks.useCardProviderData(cardId);
+  const providerName = provider.organizationDisplayName || provider.name;
   const {
     isEntitlement,
     isFulfilled,
