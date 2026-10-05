@@ -36,7 +36,10 @@ export const courseCard = StrictDict({
   ),
   courseProvider: mkCardSelector(
     cardSimpleSelectors.courseProvider,
-    (courseProvider) => ({ name: courseProvider?.name }),
+    (courseProvider) => ({
+      name: courseProvider?.name,
+      organizationDisplayName: courseProvider?.organizationDisplayName,
+    }),
   ),
   courseRun: mkCardSelector(
     cardSimpleSelectors.courseRun,
